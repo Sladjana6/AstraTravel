@@ -1,0 +1,82 @@
+body {
+
+background: #e6e6e6;
+color: #99003d;
+font-family: "Verdana";
+}
+
+#rcorners4 {
+    border-radius: 15px 50px 30px 5px;
+    background: #ccc;
+    padding: 20px; 
+    width: 1000px;
+    height: 150px; 
+}
+
+ 
+ .sadrzaj {
+ 	text-align: center;
+ 	width: 70%;
+ 	margin: auto;
+ }
+
+ h3 {
+ 	text-shadow: 3px 2px #aaaaaa;
+ 	text-decoration: underline;
+ 	text-decoration-style: wavy;
+ }
+
+ h4 {
+ 	text-decoration: underline;
+ 	text-decoration-style: double;
+ }
+
+ #poslovnice {
+  width: 1100px;
+ }
+
+ #poslovnica1 {
+  width: 350px;
+  text-align: justify;
+ }
+
+ #poslovnica2 {
+  width: 350px;
+  text-align: justify;
+ }
+
+ #poslovnica3 {
+  width: 350px;
+  text-align: justify;
+ }
+
+ footer {
+      background-color: #2d2d30;
+      color: #fff;
+      padding: 5px;
+      
+    
+  }
+
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="Content-Language" content="sr" />
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link href="css\stil2.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    var d = new Date();
+    var dan = d.getDate();
+    var godina = d.getFullYear();
+    var mesec = d.getMonth() + 1;
+    
+    document.getElementById('vreme').innerHTML ='<span class="glyphicon glyphicon-time"></span>' + " " + h + ":" + m + ":" + s + " " + dan + "/" + mesec + "/" + godina;
+    var t = setTimeout(startTime, 500);
+
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  
+    return i;
+}
+
+</script>
+	</head>
+	<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="startTime()">
+<nav  class="navbar navbar-default navbar-fixed-top">
+  <div  class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../home/index.html">ASTRA</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="../home/index.html">POČETNA</a></li>
+        <li><a href="#myPage">PONUDA</a></li>
+        <li><a href="../rezervacije/indeks.html">REZERVACIJE</a></li>
+        <li><a href="../o nama/indeks.html">O NAMA</a></li>
+      </u>
+    </div>
+  </div>
+</nav>
+<br><br>
+<div id="vreme" style="background-color: white; line-height: 50px; font-size: 25px; background: linear-gradient(rgb(200, 200, 200), rgb(100, 100, 100), rgb(45, 45 , 45)); padding-left: 5px; margin-top: -4px; font-weight: bold; color: maroon"></div>
+
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">ARANŽMANI</h3>
+    <p class="text-center">Pogledajte naše aktuelne ponude.<br> Ukoliko ste zainteresovani, posetite stranicu Rezervacije.</p>
+    
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/paris.jpg" alt="Pariz" width="400" height="300" style="height: 180px;">
+          <p><strong>Pariz</strong></p>
+          <p>Polasci: 13.5.2018, 1.6.2018, 25.7.2018.</p>
+        <p>Pun pansion</p>
+        <p>Dvokrevetne i trokrevetne, doplata u iznosu od 20€ za jednokrevetnu</p>
+        <p>Cena aranžmana ne uključuje putno osiguranje i individualne izlete</p>
+        <p>Cena: 415€</p>
+          <a href="../rezervacije/indeks.html"><button class="btn" data-toggle="modal" data-target="#myModal">Rezerviši</button></a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/japan.jpg" alt="Japan" width="400" height="300">
+          <p><strong>Japan</strong></p>
+          <p>Polasci: 13.5.2018, 1.6.2018, 25.7.2018.</p>
+        <p>Pun pansion</p>
+        <p>Dvokrevetne i trokrevetne, doplata u iznosu od 20€ za jednokrevetnu</p>
+        <p>Cena aranžmana ne uključuje putno osiguranje i individualne izlete</p>
+        <p>Cena: 500€</p>
+        <a href="../rezervacije/indeks.html"><button class="btn" data-toggle="modal" data-target="#myModal">Rezerviši</button></a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/prague.jpg" alt="Prag" width="400" height="300">
+          <p><strong>Prag</strong></p>
+          <p>Polasci: 13.5.2018, 1.6.2018, 25.7.2018.</p>
+        <p>Pun pansion</p>
+        <p>Dvokrevetne i trokrevetne, doplata u iznosu od 20€ za jednokrevetnu</p>
+        <p>Cena aranžmana ne uključuje putno osiguranje i individualne izlete</p>
+        <p>Cena: 280€</p>
+          <a href="../rezervacije/indeks.html"><button class="btn" data-toggle="modal" data-target="#myModal">Rezerviši</button></a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/moscow.jpg" alt="Moskva" width="400" height="300" style="height: 181px;">
+          <p><strong>Moskva</strong></p>
+          <p>Polasci: 13.5.2018, 1.6.2018, 25.7.2018.</p>
+        <p>Pun pansion</p>
+        <p>Dvokrevetne i trokrevetne, doplata u iznosu od 20€ za jednokrevetnu</p>
+        <p>Cena aranžmana ne uključuje putno osiguranje i individualne izlete</p>
+        <p>Cena: 320€</p>
+          <a href="../rezervacije/indeks.html"><button class="btn" data-toggle="modal" data-target="#myModal">Rezerviši</button></a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/thailand.jpg" alt="Tajland" width="400" height="300">
+          <p><strong>Tajland</strong></p>
+          <p>Polasci: 13.5.2018, 1.6.2018, 25.7.2018.</p>
+        <p>Pun pansion</p>
+        <p>Dvokrevetne i trokrevetne, doplata u iznosu od 20€ za jednokrevetnu</p>
+        <p>Cena aranžmana ne uključuje putno osiguranje i individualne izlete</p>
+        <p>Cena: 916€</p>
+          <a href="../rezervacije/indeks.html"><button class="btn" data-toggle="modal" data-target="#myModal">Rezerviši</button></a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/newyork.jpg" alt="New York" width="400" height="300" style="height: 183px;">
+          <p><strong>New York</strong></p>
+          <p>Polasci: 13.5.2018, 1.6.2018, 25.7.2018.</p>
+        <p>Pun pansion</p>
+        <p>Dvokrevetne i trokrevetne, doplata u iznosu od 20€ za jednokrevetnu</p>
+        <p>Cena aranžmana ne uključuje putno osiguranje i individualne izlete</p>
+        <p>Cena: 674€</p>
+          <a href="../rezervacije/indeks.html"><button class="btn" data-toggle="modal" data-target="#myModal">Rezerviši</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<footer class="text-center" id="footer">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>&copy; 1990-2017. ASTRA TRAVEL</p> 
+</footer>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+})
+</script>
+</html>

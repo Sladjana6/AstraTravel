@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="sr" />
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="stil3.css" />
+     
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Astra Travel</title>
+  <script>
+function validacija() {
+
+  if (document.forms[0].ime.value=='') {
+    alert("Niste uneli Vase ime!");
+    document.forms[0].ime.focus();
+    return false
+  }
+  if (document.forms[0].prezime.value=='') {
+    alert("Niste uneli Vase prezime!");
+    document.forms[0].prezime.focus();
+    return false;
+  }
+  if (document.forms[0].mail.value=='') {
+    alert("Niste uneli e-mail adresu!");
+    document.forms[0].mail.focus();
+    return false;
+  }
+  if(document.forms[0].mail.value.indexOf('@') == -1)
+  {
+    alert("Niste uneli e-mail adresu u odgovarajucem formatu!");
+    document.forms[0].mail.focus();
+    return false;
+  }
+  
+  if (!proveriradio(document.forms[0].prevoz)) { 
+    alert('Niste odabrali prevoz!');
+    return false;
+  }
+
+  if (!proveriradio(document.forms[0].soba)) { 
+    alert('Niste odabrali tip sobe!');
+    return false;
+  }
+
+  return confirm("Vasa rezervacija je uspesna, hvala Vam na ukazanom poverenju!");
+}
+  
+function proveriradio(dugmici) 
+{
+  for(var i = 0; i < dugmici.length; i++) {
+    if(dugmici[i].checked) return true;
+  }
+  return false;
+}
+</script>
+
+
+<script>
+var pomocna = false;
+
+function proveri(polje) {
+  if (pomocna == false) {
+    for (i = 0; i < polje.length; i++) {
+      polje[i].checked = true;
+    }
+    pomocna = true;
+    return "Obrisi sve cekirane"; 
+  }
+  else {
+    for (i = 0; i < polje.length; i++) {
+      polje[i].checked = false; 
+    }
+    pomocna = false;
+    return "Oznaci sve"; 
+  }
+}
+</script>
+</head>
+
+
+<body  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<nav  class="navbar navbar-default navbar-fixed-top">
+  <div  class="container-fluid">
+    <div class="navbar-header"">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../home/index.html">ASTRA</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="../home/index.html">POČETNA</a></li>
+        <li><a href="../ponuda/indeks.html">PONUDA</a></li>
+        <li><a href="#myPage">REZERVACIJE</a></li>
+        <li><a href="../o nama/indeks.html">O NAMA</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+	<br>
+	<br>
+	<br>
+	<br>
+  <div class="col-md-4"></div>
+  <div class="col-md-4" id="formica">
+  <p><h3><b>Forma za rezervacije:</b></h3></p>
+
+  <form onsubmit="return validacija()">
+    <br>
+Unesite ime i prezime: 
+<br>
+<br>
+Ime 
+<input type="text" name="ime"> 
+<br><br>
+Prezime
+<input type="text" name="prezime">
+<br>
+<br>
+<p>Izaberite prevozno sredstvo: </p>
+    <input type="radio" name="prevoz" value="Autobus">Autobus<br/>
+    <input type="radio" name="prevoz" value="Avion">Avion<br/>
+    <br>
+<p>Izaberite tip sobe: </p>
+     <input type="radio" name="soba" value="Jednokrevetna">Jednokrevetna<br/>
+    <input type="radio" name="soba" value="Dvokrevetna">Dvokrevetna<br/>
+     <input type="radio" name="soba" value="Trokrevetna">Trokrevetna<br/>
+    <input type="radio" name="soba" value="Apartman">Apartman<br/>
+    <br>
+<br>
+    <p>Posebni zahtevi: </p>
+
+    <input type="checkbox" name="Pojmovi" value="Klima">Klima<br />
+    <input type="checkbox" name="Pojmovi" value="Internet">Internet<br /> 
+    <input type="checkbox" name="Pojmovi" value="TV">TV<br /> 
+    <input type="checkbox" name="Pojmovi" value="Frižider">Frižider<br /> 
+    <br>
+<br>
+<input type="button" value="Oznaci sve" onClick="this.value=proveri(this.form.Pojmovi)"> 
+<br>
+<br>
+<b>Unesite e-mail adresu:</b>
+<br>
+<input type="text" name="mail" size="35">
+<br>
+<br>
+<br>
+    <textarea rows="4" cols="50">
+
+      Ukoliko imate neke posebne želje i zahteve, molimo Vas navedite.
+
+    </textarea>
+
+    <br />
+<br>
+
+<br>
+<INPUT type="submit" value="Registruj se" name="submit"> 
+
+</form>
+
+  </div>
+
+<div id="contact" class="container">
+  
+
+  <div class="row" id="obrazac">
+    <div class="col-md-4">
+      <p><b>Unesite Vaše ime i prezime i email adresu.</b></p>
+      <br>
+      <br>
+      <br>
+      <p><b>Sve sugestije i primedbe navedite u komentaru.</b></p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Ime" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Komentar" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Pošalji</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 class="text-center">Naše agencije: </h3>  
+  <ul class="nav nav-tabs" id="agencije">
+    <li class="active"><a data-toggle="tab" href="#home">Agencija 1</a></li>
+    <li><a data-toggle="tab" href="#menu1">Agencija 2</a></li>
+    <li><a data-toggle="tab" href="#menu2">Agencija 3</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Beograd</h2>
+      <p>Balkanska 51.
+Radno vreme: Ponedeljak - Petak: 09:00 - 20:00, Subota, nedelja: 10:00 - 17:00</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Novi Sad</h2>
+      <p>Stražilovska 27.
+Radno vreme: Ponedeljak - Petak: 09:00 - 20:00, Subota, nedelja: 10:00 - 17:00</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Niš</h2>
+      <p>Obrenoviceva bb, lokal 17-P, Tržni centar "GORCA"
+Radno vreme: Ponedeljak - Petak: 09:00 - 20:00, Subota, nedelja: 10:00 - 17:00</p>
+    </div>
+  </div>
+</div>
+</body>
+<footer class="text-center" id="footer">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>&copy; 1990-2017. ASTRA TRAVEL</p> 
+</footer>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+})
+</script>
+</html>

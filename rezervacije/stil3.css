@@ -1,0 +1,54 @@
+
+
+body {
+background-image: url("images/pozadina3.jpg");
+background-repeat: no-repeat;
+color: #000;
+}
+
+#agencije li a {
+color: #404040;
+}
+
+
+#formica {
+	position: relative;
+	right: 450px;
+	top: 0;
+}
+
+#obrazac {
+	position: relative;
+	top: 25px;
+}
+
+footer {
+      background-color: #2d2d30;
+      color: #fff;
+      padding: 5px;
+      
+    
+  }
+
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
